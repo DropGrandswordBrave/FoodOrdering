@@ -1,0 +1,56 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Local IDE and assistant configuration
+/.idea/
+/.codex/
+/.agents/
+
+# Kotlin / Android generated files (all modules)
+.kotlin/
+**/build/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+*.log
+
+# Machine-specific SDK configuration
+**/local.properties
+
+# Signing keys and credentials
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+keystore.properties
+signing.properties
+secrets.properties
+.env
+.env.*
+!.env.example
+/.aws/
+/.ssh/
+google-services.json
+*service-account*.json
+*service_account*.json
+
+# OS-generated files
+Thumbs.db
+Desktop.ini

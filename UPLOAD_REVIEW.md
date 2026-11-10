@@ -1,39 +1,75 @@
-# GitHub 업로드 전 검토 목록
+# GitHub 업로드 파일 검토
 
-아래는 .gitignore 적용 후 커밋할 파일 목록입니다. 원본 과제 PDF와 에셋을 포함합니다.
+대상: https://github.com/DropGrandswordBrave/FoodOrdering (main)
 
-제외: local.properties, .gradle/, .kotlin/, .idea/, .codex/, 모든 build/ 폴더, APK/AAB, 서명 키와 인증 정보 파일.
+이번 변경: Splash/Welcome 디자인, Next → Login 진입, Skip → Home 진입, 글꼴과 라이선스, 진행 기록.
 
-대상 저장소: https://github.com/DropGrandswordBrave/FoodOrdering
-이 문서 자신도 커밋 대상에 포함됩니다.
+제외 확인: local.properties, 모든 build/ 폴더, APK/AAB, IDE/Gradle/Kotlin 캐시, 서명 키 및 인증 정보 파일.
+소스/설정 텍스트에 대한 일반적인 비밀키/토큰 패턴 검사에서 일치 항목이 없었습니다.
+
+## 이번 커밋 변경 파일
+
+```text
+app/build.gradle.kts
+app/src/main/AndroidManifest.xml
+app/src/main/java/com/example/foodorderingapp/LoginActivity.kt
+app/src/main/java/com/example/foodorderingapp/MainActivity.kt
+app/src/main/java/com/example/foodorderingapp/SplashActivity.kt
+app/src/main/java/com/example/foodorderingapp/WelcomeActivity.kt
+app/src/main/res/drawable/onboarding_burger.xml
+app/src/main/res/drawable/onboarding_logo.xml
+app/src/main/res/drawable/onboarding_next_background.xml
+app/src/main/res/font/itim_regular.ttf
+app/src/main/res/layout/activity_login.xml
+app/src/main/res/layout/activity_splash.xml
+app/src/main/res/layout/activity_welcome.xml
+app/src/main/res/raw/itim_license.txt
+app/src/main/res/values/colors.xml
+app/src/main/res/values/strings.xml
+app/src/main/res/values/themes.xml
+assets-source/fonts/itim/Itim-Regular.ttf
+assets-source/fonts/itim/OFL.txt
+gradle/libs.versions.toml
+IMPLEMENTATION_STATUS.md
+UPLOAD_REVIEW.md
+```
+
+## 전체 추적 대상 파일
 
 ```text
 .gitignore
-IMPLEMENTATION_STATUS.md
 app/.gitignore
 app/build.gradle.kts
 app/src/androidTest/java/com/example/foodorderingapp/ExampleInstrumentedTest.kt
 app/src/main/AndroidManifest.xml
-app/src/main/java/com/example/foodorderingapp/MainActivity.kt
-app/src/main/java/com/example/foodorderingapp/SplashActivity.kt
 app/src/main/java/com/example/foodorderingapp/fragment/CartFragment.kt
 app/src/main/java/com/example/foodorderingapp/fragment/HistoryFragment.kt
 app/src/main/java/com/example/foodorderingapp/fragment/HomeFragment.kt
 app/src/main/java/com/example/foodorderingapp/fragment/ProfileFragment.kt
 app/src/main/java/com/example/foodorderingapp/fragment/SearchFragment.kt
+app/src/main/java/com/example/foodorderingapp/LoginActivity.kt
+app/src/main/java/com/example/foodorderingapp/MainActivity.kt
+app/src/main/java/com/example/foodorderingapp/SplashActivity.kt
 app/src/main/java/com/example/foodorderingapp/ui/theme/Color.kt
 app/src/main/java/com/example/foodorderingapp/ui/theme/Theme.kt
 app/src/main/java/com/example/foodorderingapp/ui/theme/Type.kt
+app/src/main/java/com/example/foodorderingapp/WelcomeActivity.kt
 app/src/main/keepRules/rules.keep
 app/src/main/res/drawable/cart.xml
 app/src/main/res/drawable/history.xml
 app/src/main/res/drawable/home.xml
 app/src/main/res/drawable/ic_launcher_background.xml
 app/src/main/res/drawable/ic_launcher_foreground.xml
+app/src/main/res/drawable/onboarding_burger.xml
+app/src/main/res/drawable/onboarding_logo.xml
+app/src/main/res/drawable/onboarding_next_background.xml
 app/src/main/res/drawable/search.xml
 app/src/main/res/drawable/user.xml
+app/src/main/res/font/itim_regular.ttf
+app/src/main/res/layout/activity_login.xml
 app/src/main/res/layout/activity_main.xml
 app/src/main/res/layout/activity_splash.xml
+app/src/main/res/layout/activity_welcome.xml
 app/src/main/res/layout/fragment_cart.xml
 app/src/main/res/layout/fragment_history.xml
 app/src/main/res/layout/fragment_home.xml
@@ -53,13 +89,13 @@ app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp
 app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp
 app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp
 app/src/main/res/navigation/navigation.xml
+app/src/main/res/raw/itim_license.txt
 app/src/main/res/values/colors.xml
 app/src/main/res/values/strings.xml
 app/src/main/res/values/themes.xml
 app/src/main/res/xml/backup_rules.xml
 app/src/main/res/xml/data_extraction_rules.xml
 app/src/test/java/com/example/foodorderingapp/ExampleUnitTest.kt
-assets/Kotlin 19. Android UI Components and Layouts (2).pdf
 assets/assets of foododring/admindrawable/addimage.png
 assets/assets of foododring/admindrawable/arrow_down.xml
 assets/assets of foododring/admindrawable/arrow_left.xml
@@ -145,6 +181,9 @@ assets/assets of foododring/drawable/truck.xml
 assets/assets of foododring/drawable/user.xml
 assets/assets of foododring/drawable/user_plus.xml
 assets/assets of foododring/drawable/whitebutton.xml
+assets/Kotlin 19. Android UI Components and Layouts (2).pdf
+assets-source/fonts/itim/Itim-Regular.ttf
+assets-source/fonts/itim/OFL.txt
 build.gradle.kts
 gradle.properties
 gradle/gradle-daemon-jvm.properties
@@ -153,6 +192,7 @@ gradle/wrapper/gradle-wrapper.jar
 gradle/wrapper/gradle-wrapper.properties
 gradlew
 gradlew.bat
+IMPLEMENTATION_STATUS.md
 settings.gradle.kts
 UPLOAD_REVIEW.md
 ```

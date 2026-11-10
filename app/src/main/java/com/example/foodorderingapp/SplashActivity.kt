@@ -3,6 +3,7 @@ package com.example.foodorderingapp
 import android.content.Intent
 import android.os.Bundle
 import android.os.SystemClock
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -21,7 +22,11 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        enableEdgeToEdge()
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true
+            isAppearanceLightNavigationBars = true
+        }
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
@@ -36,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
                 delay((deadline - SystemClock.elapsedRealtime()).coerceAtLeast(0L))
                 if (!navigated) {
                     navigated = true
-                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    startActivity(Intent(this@SplashActivity, WelcomeActivity::class.java))
                     finish()
                 }
             }

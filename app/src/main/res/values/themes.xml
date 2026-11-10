@@ -2,4 +2,11 @@
 <resources>
 
     <style name="Theme.FoodOrderingApp" parent="Theme.Material3.DayNight.NoActionBar" />
+    <style name="Theme.FoodOrderingApp.Onboarding" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorAccent">@color/onboarding_green_end</item>
+        <item name="colorPrimary">@color/onboarding_green_end</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
 </resources>
